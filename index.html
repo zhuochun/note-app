@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <title>CS3240 SimpleNote</title>
+    
+  <link rel="stylesheet" href="css/chui-ios-3.5.2.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<nav class='current'>
+    <h1>SimpleNote</h1>
+    <a class='button' id="goto-new-note">New</a>
+</nav>
+<article id="home" class="current">
+    <section>
+        <ul class='list' id="home-note-list">
+        </ul>
+    </section>
+</article>
+    
+<nav class='next'>
+    <a class='button backTo' id="goto-home">Back</a>
+    <h1>View Note</h1>
+    <a class='button' id='goto-edit-note'>Edit</a>
+</nav>
+<article id="note-view" class="next" data-id="">
+    <section>
+        <ul class='list' >
+            <li>
+                <h3 class='note-title'></h3>
+                <p class='note-content'></p>
+            </li>
+        </ul>
+    </section>
+</article>
+
+<nav class='next'>
+    <a class='button back'>Back</a>
+    <h1 id="note-edit-page-title">New Note</h1>
+    <a class='button' id="note-edit-save">Save</a>
+</nav>
+<article id="note-edit" class="next" data-id="">
+    <section>
+      <ul class='list' ui-implements='form'>
+        <li>
+            <input type="text" id='note-edit-title' placeholder="Title" required>
+        </li>
+      </ul>
+      <ul class='list' ui-implements='form'>
+        <li>
+            <textarea id='note-edit-content' placeholder="Note" rows="30" required></textarea>
+        </li>
+      </ul>
+    </section>
+</article>
+    
+    <script src="js/jquery-2.0.3.js"></script>
+    <script src="js/chui-3.5.2.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
